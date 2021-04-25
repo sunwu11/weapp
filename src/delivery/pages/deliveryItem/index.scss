@@ -1,0 +1,252 @@
+.index {
+  position: relative;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  &-withData {
+    position: relative;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    // background-color: yellowgreen;
+  }
+
+}
+
+.delivery-wrapper-item:last-child {
+  .delivery-wrapper-item-top-imgbox {
+    height: 0;
+  }
+}
+
+.delivery-wrapper-item:first-child {
+  padding-top: 15px;
+}
+
+.delivery-wrapper {
+  // flex: 1;
+  // height: 376px;
+  // padding: 40px 0;
+  // margin-bottom: 300px;
+  height: calc(100vh - 400px);
+
+  &-item {
+    width: 654px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 80px;
+
+    margin: 0 auto;
+
+    &-top {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      min-height: 80px;
+
+      &-imgbox {
+        width: 3px;
+        background: #dddddd;
+        position: relative;
+        margin: 0 22.5px;
+
+        &-img {
+          width: 32px;
+          height: 32px;
+          position: absolute;
+          top: -16px;
+          left: -16px;
+          z-index: 10;
+          border-radius: 32px;
+          border: 1px solid #666;
+          -webkit-border-radius: 32px;
+          -moz-border-radius: 32px;
+          -ms-border-radius: 32px;
+          -o-border-radius: 32px;
+        }
+
+        .status_finished {
+          background-color: #70B603;
+        }
+
+        .status_doing {
+          background-color: #02A7F0;
+        }
+
+        .status_unfinished {
+          background-color: #AAAAAA;
+        }
+      }
+
+      .status_finished_imgbox {
+        background-color: #70B603;
+      }
+
+      .status_doing_imgbox {
+        background-color: #02A7F0;
+      }
+
+      .status_unfinished_imgbox {
+        width: 3px;
+        position: relative;
+        background-image: url('../../../assets/images/dashed.png');
+        background-repeat: repeat-y;
+        background-position: center;
+
+      }
+
+      &-message {
+        margin-top: -22.5px;
+        width: 562px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        margin: 20px;
+        margin-top: -18px;
+        min-height: 55px;
+        min-height: 80px;
+
+        //   标题;
+        &-title {
+          font-size: 30px;
+          color: #666666;
+          letter-spacing: 0;
+          text-align: left;
+          padding-bottom: 10px;
+        }
+
+        .status_finished_title {
+          color: #273f04;
+        }
+
+        .status_doing_title {
+          color: #0182e5;
+        }
+
+        .status_unfinished_title {
+          color: #333333;
+        }
+
+        //   时间;
+        &-time {
+          font-size: 36px;
+          color: #333333;
+          padding-bottom: 6px;
+        }
+
+        //   位置信息;
+        &-position {
+          font-size: 22px;
+          color: #666666;
+          letter-spacing: 0;
+          text-align: left;
+          align-items: center;
+          display: flex;
+          margin-bottom: 65px;
+
+          // 图片1
+          &-img1 {
+            width: 31.5px;
+            height: 39.5px;
+            margin: 0 5px;
+          }
+
+          // 图片2
+          &-img2 {
+            width: 31.5px;
+            height: 39.5px;
+            margin: 0 5px;
+          }
+        }
+
+        .withImgWrapper {
+          margin-bottom: 20px;
+        }
+
+        &-imgWrapper {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+
+          &-text {
+            font-size: 24px;
+          }
+
+          &-imgPicker {
+            width: 100%;
+            padding: 20px 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.withoutData {
+  height: 100vh;
+}
+
+.delivery-item-bottom {
+  position: relative;
+  background-color: #fff;
+  height: 400px;
+  width: 100%;
+  z-index: 999;
+
+  position: fixed;
+  bottom: 0px;
+
+  &-done {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    width: 220px;
+    height: 220px;
+    border-radius: 220px;
+    -webkit-border-radius: 220px;
+    -moz-border-radius: 220px;
+    -ms-border-radius: 220px;
+    -o-border-radius: 220px;
+    background-color: #02A7F0;
+    margin: 0 auto;
+
+    text-align: center;
+    line-height: 50px;
+
+    font-size: 34px;
+    color: #fff;
+
+    padding: 10px;
+    // box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    box-shadow: 0px 4px 17.2px 2.8px rgba(67, 166, 210, 0.52);
+
+    &-text {
+      display: block;
+    }
+
+    &-time {
+      display: block;
+
+    }
+
+  }
+}
+
+.hover_time{
+  background-color: pink;
+}

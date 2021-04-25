@@ -1,0 +1,71 @@
+.index {
+  position: relative;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+.tab-content1 {
+  // background-color: pink;
+  height: 100vh;
+  overflow: hidden;
+
+  &-takePictures {
+    // background-color: yellowgreen;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    &-img {
+      // background-color: aqua;
+      width: 180px;
+      height: 180px;
+    }
+
+    &-text {
+      // background-color: salmon;
+      margin-top: 36px;
+      font-size: 50px;
+
+    }
+  }
+}
+
+.tab-content2 {
+  // background-color: pink;
+  height: 100vh;
+  overflow: hidden;
+
+  .form {
+    // background-color: yellow;
+    height: 100vh;
+    overflow: hidden;
+
+    &-btn {
+      background-color: #0182e5;
+      // position: fixed;
+      // bottom: 0px;
+      width: 100%;
+      color: #fff;
+
+    }
+  }
+}
+
+.btnWrapper {
+  // background-color: yellowgreen;
+  display: flex;
+  margin-bottom: 20px;
+
+  .btn {
+    flex: 1;
+    margin: 0 10px;
+  }
+}

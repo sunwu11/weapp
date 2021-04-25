@@ -1,0 +1,55 @@
+const UpdateInfo = async (latitude = '', longitude = '', address = '') => {
+    const deliveryList = list ? _.cloneDeep(list.slice()).filter(item => item.NodeType === '开始送货') : []
+    Promise.all(deliveryList.map(item => {
+        let obj = {
+            UserCode: userCode,
+            TruckOrder: item.TruckOrder,
+            NodeType: item.NodeType,
+            DateTime: dayjs().format('YYYY-MM-DD HH:mm'),
+            Address: address,
+            Longitude: longitude,
+            Latitude: latitude,
+            BusinessType: 'Delivery'
+        }
+        return new Promise((resolve, reject) => {
+            update(obj).then(({ boolean }) => {
+                if (boolean) {
+                    return resolve('success')
+                } else {
+                    return reject('fail')
+                }
+            })
+        })
+    }))
+        .then(() => {
+            Taro.hideLoading()
+            toastSuccess('批量打卡完成')
+            getList()
+        })
+        .catch(() => {
+            Taro.hideLoading()
+            toastNone('批量打卡失败，请重试')
+        })
+}
+
+return Mock.mock({
+    'list|1-10': [
+        {
+            'TruckOrder|+1': ['DO200820004', 'DO200820005', 'DO200820006'],
+            'NodeType|+1': ["到达货代仓库", "开始卸货", "卸货完成", "上传照片"],
+            'Tel|+1': ['13888888888', '13666666666', '1355555555'],
+            'Address': '@county(true)',
+            'DeadLine': '@date(yyyy-MM-dd HH:mm:ss)',
+        }
+    ]
+})
+
+
+const getList = async () => {
+    const { list: list1 } = await getDeliveryList()
+    deliveryStore.setList(list1);
+}
+
+return Mock.mock({
+    "boolean|1-2": false
+})

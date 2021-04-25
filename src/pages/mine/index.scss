@@ -1,0 +1,40 @@
+.avatarWrapper {
+  height: 140px;
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  margin: auto 20px;
+}
+
+.login {
+  display: block;
+  margin: 0;
+  border: none;
+}
+
+.contentWrapper {
+  margin: 40px 10px 0;
+  padding: 25px;
+}
+
+.title {
+  font-size: 30px;
+  color: #ff0000;
+  margin-bottom: 10px;
+}
+
+.content {
+  font-size: 34px;
+  color: #4f81df;
+}
+
+.version {
+  margin: 40px 10px 0;
+  padding: 25px;
+  color: #2a2a2b;
+  font-size: 30px;
+}
